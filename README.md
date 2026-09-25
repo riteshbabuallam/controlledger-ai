@@ -4,7 +4,8 @@ ControlLedger is a continuous expense-controls and audit-evidence platform. It c
 
 This repository is an interview-scale MVP built with synthetic data. It is not an autonomous reimbursement system and contains no real employee, client, or financial data.
 
-**Live demo:** [controlledger-ai.streamlit.app](https://controlledger-ai.streamlit.app/)  
+**Live demo:** [controlledger-ai.streamlit.app](https://controlledger-ai.streamlit.app/)
+
 **API:** [controlledger-api.onrender.com/docs](https://controlledger-api.onrender.com/docs)
 
 ## Verified results
