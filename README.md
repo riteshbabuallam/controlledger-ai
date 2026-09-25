@@ -4,6 +4,9 @@ ControlLedger is a continuous expense-controls and audit-evidence platform. It c
 
 This repository is an interview-scale MVP built with synthetic data. It is not an autonomous reimbursement system and contains no real employee, client, or financial data.
 
+**Live demo:** [controlledger-ai.streamlit.app](https://controlledger-ai.streamlit.app/)  
+**API:** [controlledger-api.onrender.com/docs](https://controlledger-api.onrender.com/docs)
+
 ## Verified results
 
 The committed 30-claim labeled portfolio currently produces:
@@ -178,7 +181,7 @@ The test suite covers structured AI responses, embeddings, policy-control drafti
 
 ## Deployment
 
-`Dockerfile` and `render.yaml` define the Render API deployment, including required live-AI settings and Render's dynamic port. On an empty ephemeral filesystem, the container recreates the 30 synthetic demo claims in offline mode before starting the API in required live-Gemini mode. The Streamlit frontend is configured for Streamlit Community Cloud with `dashboard/app.py` as its entrypoint and `CONTROLLEDGER_API_URL` pointing to the Render API.
+The API is deployed on Render and the reviewer interface is deployed on Streamlit Community Cloud. `Dockerfile` and `render.yaml` define the Render API deployment, including required live-AI settings and Render's dynamic port. On an empty ephemeral filesystem, the container recreates the 30 synthetic demo claims in offline mode before starting the API in required live-Gemini mode. The Streamlit frontend uses `dashboard/app.py` as its entrypoint and connects to the Render API through a hosted environment setting.
 
 ## Repository map
 
