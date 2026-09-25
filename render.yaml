@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: controlledger-api
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: CONTROLLEDGER_DB_PATH
+        value: /app/data/controlledger.db
+      - key: CONTROLLEDGER_RAG_BACKEND
+        value: chroma
+      - key: CONTROLLEDGER_AI_MODE
+        value: required
+      - key: CONTROLLEDGER_AI_PROVIDER
+        value: gemini
+      - key: CONTROLLEDGER_LLM_MODEL
+        value: gemini-3.1-flash-lite
+      - key: CONTROLLEDGER_EMBEDDING_MODEL
+        value: gemini-embedding-2
+      - key: GEMINI_API_KEY
+        sync: false

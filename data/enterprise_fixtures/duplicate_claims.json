@@ -1,0 +1,6 @@
+[
+  {"source_claim_id":"HIST-001","employee_id":"E001","merchant":"Metro Bistro","amount":1250.0,"date":"2026-09-21"},
+  {"source_claim_id":"HIST-002","employee_id":"E003","merchant":"Airport Taxi","amount":2200.0,"date":"2026-09-22"},
+  {"source_claim_id":"HIST-003","employee_id":"E005","merchant":"Office Hub","amount":499.0,"date":"2026-09-03"},
+  {"source_claim_id":"HIST-004","employee_id":"E002","merchant":"Tech World","amount":19999.0,"date":"2026-09-12"}
+]

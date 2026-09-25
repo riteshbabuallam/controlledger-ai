@@ -1,0 +1,59 @@
+version: "1.0"
+controls:
+  - id: AMOUNT_MATCH_001
+    name: Receipt total versus claimed amount
+    type: amount_match
+    severity: high
+    policy_clause: MEALS-2.1
+    action: reject
+    parameters:
+      tolerance: 1.0
+
+  - id: ALLOWANCE_002
+    name: Expense category allowance
+    type: category_allowance
+    severity: medium
+    policy_clause: MEALS-4.2
+    action: human_review
+    parameters:
+      meals: 1500.0
+      hotel: 9000.0
+      transport: 5000.0
+      equipment: 25000.0
+      miscellaneous: 3000.0
+
+  - id: DUPLICATE_003
+    name: Duplicate or split claim detection
+    type: duplicate
+    severity: critical
+    policy_clause: EQUIP-4.3
+    action: reject
+    parameters: {}
+
+  - id: PREAPPROVAL_004
+    name: Travel preapproval
+    type: travel_preapproval
+    severity: high
+    policy_clause: TRAVEL-2.1
+    action: reject
+    parameters:
+      travel_categories: [meals, hotel, transport]
+
+  - id: TRAVEL_DATES_005
+    name: Expense within approved travel dates
+    type: travel_dates
+    severity: high
+    policy_clause: TRAVEL-3.2
+    action: reject
+    parameters:
+      grace_days: 1
+
+  - id: FX_VARIANCE_006
+    name: Currency conversion variance
+    type: fx_variance
+    severity: medium
+    policy_clause: TRAVEL-5.3
+    action: human_review
+    parameters:
+      tolerance_percent: 3.0
+

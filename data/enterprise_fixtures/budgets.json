@@ -1,0 +1,9 @@
+[
+  {"cost_center":"CC100","budget":500000,"spent":210000,"available":290000},
+  {"cost_center":"CC200","budget":350000,"spent":330000,"available":20000},
+  {"cost_center":"CC300","budget":450000,"spent":125000,"available":325000},
+  {"cost_center":"CC400","budget":250000,"spent":245000,"available":5000},
+  {"cost_center":"CC500","budget":300000,"spent":100000,"available":200000},
+  {"cost_center":"CC900","budget":1000000,"spent":420000,"available":580000}
+]
+

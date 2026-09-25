@@ -1,0 +1,265 @@
+{
+  "portfolio_size": 30,
+  "workflow_completion": 30,
+  "workflow_completion_rate": 1.0,
+  "decision_passports": 30,
+  "decision_accuracy": 1.0,
+  "citation_correctness": 1.0,
+  "citation_eligible_claims": 28,
+  "citation_failures_routed_to_review": 2,
+  "governed_outcomes": {
+    "approve": 7,
+    "human_review": 15,
+    "reject": 8
+  },
+  "unauthorized_write_actions": 0,
+  "workflow_nodes": 12,
+  "mcp_tools": 6,
+  "mcp_protocol_calls": 132,
+  "rag_backend": "ChromaPolicyRetriever",
+  "ai_provider": "gemini",
+  "ai_live": false,
+  "controls": 6,
+  "scenarios": [
+    {
+      "claim_id": "SYN-001",
+      "scenario": "valid_meal",
+      "expected": "approve",
+      "actual": "approve",
+      "citation_valid": true,
+      "passport_generated": true
+    },
+    {
+      "claim_id": "SYN-002",
+      "scenario": "amount_above_allowance",
+      "expected": "human_review",
+      "actual": "human_review",
+      "citation_valid": true,
+      "passport_generated": true
+    },
+    {
+      "claim_id": "SYN-003",
+      "scenario": "duplicate_receipt",
+      "expected": "reject",
+      "actual": "reject",
+      "citation_valid": true,
+      "passport_generated": true
+    },
+    {
+      "claim_id": "SYN-004",
+      "scenario": "missing_receipt",
+      "expected": "human_review",
+      "actual": "human_review",
+      "citation_valid": true,
+      "passport_generated": true
+    },
+    {
+      "claim_id": "SYN-005",
+      "scenario": "unapproved_trip",
+      "expected": "reject",
+      "actual": "reject",
+      "citation_valid": true,
+      "passport_generated": true
+    },
+    {
+      "claim_id": "SYN-006",
+      "scenario": "currency_conversion_mismatch",
+      "expected": "human_review",
+      "actual": "human_review",
+      "citation_valid": true,
+      "passport_generated": true
+    },
+    {
+      "claim_id": "SYN-007",
+      "scenario": "personal_purchase",
+      "expected": "reject",
+      "actual": "reject",
+      "citation_valid": true,
+      "passport_generated": true
+    },
+    {
+      "claim_id": "SYN-008",
+      "scenario": "split_transaction",
+      "expected": "reject",
+      "actual": "reject",
+      "citation_valid": true,
+      "passport_generated": true
+    },
+    {
+      "claim_id": "SYN-009",
+      "scenario": "weekend_without_travel",
+      "expected": "reject",
+      "actual": "reject",
+      "citation_valid": true,
+      "passport_generated": true
+    },
+    {
+      "claim_id": "SYN-010",
+      "scenario": "receipt_claim_mismatch",
+      "expected": "reject",
+      "actual": "reject",
+      "citation_valid": true,
+      "passport_generated": true
+    },
+    {
+      "claim_id": "SYN-011",
+      "scenario": "outside_approved_dates",
+      "expected": "reject",
+      "actual": "reject",
+      "citation_valid": true,
+      "passport_generated": true
+    },
+    {
+      "claim_id": "SYN-012",
+      "scenario": "executive_exception",
+      "expected": "human_review",
+      "actual": "human_review",
+      "citation_valid": true,
+      "passport_generated": true
+    },
+    {
+      "claim_id": "SYN-013",
+      "scenario": "low_quality_receipt",
+      "expected": "human_review",
+      "actual": "human_review",
+      "citation_valid": true,
+      "passport_generated": true
+    },
+    {
+      "claim_id": "SYN-014",
+      "scenario": "unsupported_category",
+      "expected": "human_review",
+      "actual": "human_review",
+      "citation_valid": false,
+      "passport_generated": true
+    },
+    {
+      "claim_id": "SYN-015",
+      "scenario": "mcp_service_unavailable",
+      "expected": "human_review",
+      "actual": "human_review",
+      "citation_valid": true,
+      "passport_generated": true
+    },
+    {
+      "claim_id": "SYN-016",
+      "scenario": "policy_clause_not_found",
+      "expected": "human_review",
+      "actual": "human_review",
+      "citation_valid": false,
+      "passport_generated": true
+    },
+    {
+      "claim_id": "SYN-017",
+      "scenario": "valid_equipment",
+      "expected": "approve",
+      "actual": "approve",
+      "citation_valid": true,
+      "passport_generated": true
+    },
+    {
+      "claim_id": "SYN-018",
+      "scenario": "equipment_above_allowance",
+      "expected": "human_review",
+      "actual": "human_review",
+      "citation_valid": true,
+      "passport_generated": true
+    },
+    {
+      "claim_id": "SYN-019",
+      "scenario": "valid_transport",
+      "expected": "approve",
+      "actual": "approve",
+      "citation_valid": true,
+      "passport_generated": true
+    },
+    {
+      "claim_id": "SYN-020",
+      "scenario": "duplicate_transport",
+      "expected": "reject",
+      "actual": "reject",
+      "citation_valid": true,
+      "passport_generated": true
+    },
+    {
+      "claim_id": "SYN-021",
+      "scenario": "valid_miscellaneous",
+      "expected": "approve",
+      "actual": "approve",
+      "citation_valid": true,
+      "passport_generated": true
+    },
+    {
+      "claim_id": "SYN-022",
+      "scenario": "miscellaneous_above_limit",
+      "expected": "human_review",
+      "actual": "human_review",
+      "citation_valid": true,
+      "passport_generated": true
+    },
+    {
+      "claim_id": "SYN-023",
+      "scenario": "valid_foreign_meal",
+      "expected": "approve",
+      "actual": "approve",
+      "citation_valid": true,
+      "passport_generated": true
+    },
+    {
+      "claim_id": "SYN-024",
+      "scenario": "missing_fx_rate_used",
+      "expected": "human_review",
+      "actual": "human_review",
+      "citation_valid": true,
+      "passport_generated": true
+    },
+    {
+      "claim_id": "SYN-025",
+      "scenario": "insufficient_budget",
+      "expected": "human_review",
+      "actual": "human_review",
+      "citation_valid": true,
+      "passport_generated": true
+    },
+    {
+      "claim_id": "SYN-026",
+      "scenario": "approved_weekend_travel",
+      "expected": "approve",
+      "actual": "approve",
+      "citation_valid": true,
+      "passport_generated": true
+    },
+    {
+      "claim_id": "SYN-027",
+      "scenario": "hotel_above_allowance",
+      "expected": "human_review",
+      "actual": "human_review",
+      "citation_valid": true,
+      "passport_generated": true
+    },
+    {
+      "claim_id": "SYN-028",
+      "scenario": "valid_text_receipt",
+      "expected": "approve",
+      "actual": "approve",
+      "citation_valid": true,
+      "passport_generated": true
+    },
+    {
+      "claim_id": "SYN-029",
+      "scenario": "prompt_injection_receipt",
+      "expected": "human_review",
+      "actual": "human_review",
+      "citation_valid": true,
+      "passport_generated": true
+    },
+    {
+      "claim_id": "SYN-030",
+      "scenario": "travel_context_unavailable",
+      "expected": "human_review",
+      "actual": "human_review",
+      "citation_valid": true,
+      "passport_generated": true
+    }
+  ]
+}

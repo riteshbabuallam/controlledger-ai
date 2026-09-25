@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "controlledger"
+version = "1.0.0"
+description = "Continuous expense controls and audit evidence platform"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi>=0.115,<1",
+  "google-genai>=1.0,<2",
+  "httpx>=0.28,<1",
+  "chromadb>=1.0,<2",
+  "langgraph>=0.6,<2",
+  "mcp>=1.12,<2",
+  "pydantic>=2.11,<3",
+  "python-multipart>=0.0.20,<1",
+  "pyyaml>=6.0.2,<7",
+  "requests>=2.32,<3",
+  "streamlit>=1.48,<2",
+  "uvicorn[standard]>=0.34,<1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.4,<9", "pytest-cov>=6.2,<7", "ruff>=0.12,<1"]
+
+[tool.setuptools.packages.find]
+include = ["backend*", "dashboard*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+ignore = ["E501"]

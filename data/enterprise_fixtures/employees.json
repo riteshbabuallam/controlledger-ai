@@ -1,0 +1,9 @@
+[
+  {"employee_id":"E001","name":"Aarav Mehta","department":"Consulting","cost_center":"CC100","active":true,"risk_tier":"standard"},
+  {"employee_id":"E002","name":"Maya Iyer","department":"Engineering","cost_center":"CC200","active":true,"risk_tier":"standard"},
+  {"employee_id":"E003","name":"Noah Williams","department":"Sales","cost_center":"CC300","active":true,"risk_tier":"standard"},
+  {"employee_id":"E004","name":"Sofia Chen","department":"Executive","cost_center":"CC900","active":true,"risk_tier":"high"},
+  {"employee_id":"E005","name":"Liam Okafor","department":"Operations","cost_center":"CC400","active":true,"risk_tier":"standard"},
+  {"employee_id":"E006","name":"Elena Garcia","department":"Finance","cost_center":"CC500","active":true,"risk_tier":"standard"}
+]
+
