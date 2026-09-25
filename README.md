@@ -176,9 +176,9 @@ make ai-smoke
 
 The test suite covers structured AI responses, embeddings, policy-control drafting, all six controls, the real MCP stdio path, all six MCP tools, the write authorization gate, API submission and review, append-only passport revisions, three-way routing, citation verification, prompt injection, and missing enterprise context. The committed evaluation is reproducible without network access; its AI metadata honestly identifies the offline fallback. `make ai-smoke` is the separate live-provider verification.
 
-## Deployment-ready, not deployed
+## Deployment
 
-`Dockerfile` and `render.yaml` define the API deployment, including required live-AI settings. The Streamlit frontend is ready for a separate Streamlit Community Cloud service with `dashboard/app.py` as its entrypoint and `CONTROLLEDGER_API_URL` pointing to the API. No deployment has been performed.
+`Dockerfile` and `render.yaml` define the Render API deployment, including required live-AI settings and Render's dynamic port. On an empty ephemeral filesystem, the container recreates the 30 synthetic demo claims in offline mode before starting the API in required live-Gemini mode. The Streamlit frontend is configured for Streamlit Community Cloud with `dashboard/app.py` as its entrypoint and `CONTROLLEDGER_API_URL` pointing to the Render API.
 
 ## Repository map
 
